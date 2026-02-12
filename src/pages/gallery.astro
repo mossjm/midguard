@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import apparel from '../../assets/images/original/apparel.jpg';
+import heroBg from '../../assets/images/original/hero-bg.jpg';
+---
+
+<BaseLayout title="Gallery">
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       PAGE HERO
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-charcoal-900 bg-gradient-to-b from-charcoal-900 to-charcoal-950 py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-gold-accent text-sm font-bold uppercase tracking-widest mb-4">
+        See Us in Action
+      </span>
+      <h1 class="text-4xl md:text-6xl font-heading font-bold text-white uppercase tracking-wider mb-6">
+        GALLERY
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        Warriors on the mat. Champions in the making.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       GALLERY GRID
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-charcoal-950 py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white uppercase tracking-wider mb-4">
+          Life at Midguard
+        </h2>
+        <div class="w-20 h-1 bg-red-accent mx-auto"></div>
+      </div>
+
+      <!-- Masonry-like Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 gallery-grid">
+
+        <!-- Image 1 — Hero/Training (large, spans 2 columns on lg) -->
+        <div class="sm:col-span-2 lg:col-span-2 lg:row-span-2">
+          <Image
+            src={heroBg}
+            alt="Training at Midguard Academy"
+            class="rounded-xl w-full h-full object-cover"
+            width={800}
+            height={600}
+          />
+        </div>
+
+        <!-- Image 2 — Apparel -->
+        <div>
+          <Image
+            src={apparel}
+            alt="Midguard Academy apparel and gear"
+            class="rounded-xl w-full h-full object-cover"
+            width={800}
+            height={600}
+          />
+        </div>
+
+        <!-- Placeholder 1 -->
+        <div class="bg-charcoal-800 border border-white/10 rounded-xl flex flex-col items-center justify-center p-8 min-h-[200px]">
+          <svg class="w-10 h-10 text-gray-600 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+          </svg>
+          <span class="text-gray-500 font-heading text-sm uppercase tracking-wider">Coming Soon</span>
+        </div>
+
+        <!-- Placeholder 2 (spans 2 columns on sm) -->
+        <div class="sm:col-span-2 lg:col-span-1 bg-charcoal-800 border border-white/10 rounded-xl flex flex-col items-center justify-center p-8 min-h-[200px]">
+          <svg class="w-10 h-10 text-gray-600 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+          </svg>
+          <span class="text-gray-500 font-heading text-sm uppercase tracking-wider">Coming Soon</span>
+        </div>
+
+        <!-- Placeholder 3 -->
+        <div class="bg-charcoal-800 border border-white/10 rounded-xl flex flex-col items-center justify-center p-8 min-h-[200px]">
+          <svg class="w-10 h-10 text-gray-600 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+          </svg>
+          <span class="text-gray-500 font-heading text-sm uppercase tracking-wider">Coming Soon</span>
+        </div>
+
+        <!-- Placeholder 4 -->
+        <div class="bg-charcoal-800 border border-white/10 rounded-xl flex flex-col items-center justify-center p-8 min-h-[200px]">
+          <svg class="w-10 h-10 text-gray-600 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+          </svg>
+          <span class="text-gray-500 font-heading text-sm uppercase tracking-wider">Coming Soon</span>
+        </div>
+
+        <!-- Placeholder 5 (spans 2 columns on lg) -->
+        <div class="sm:col-span-2 lg:col-span-2 bg-charcoal-800 border border-white/10 rounded-xl flex flex-col items-center justify-center p-8 min-h-[200px]">
+          <svg class="w-10 h-10 text-gray-600 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+          </svg>
+          <span class="text-gray-500 font-heading text-sm uppercase tracking-wider">Coming Soon</span>
+        </div>
+
+        <!-- Placeholder 6 -->
+        <div class="bg-charcoal-800 border border-white/10 rounded-xl flex flex-col items-center justify-center p-8 min-h-[200px]">
+          <svg class="w-10 h-10 text-gray-600 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+          </svg>
+          <span class="text-gray-500 font-heading text-sm uppercase tracking-wider">Coming Soon</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       CTA BANNER
+       ════════════════════════════════════════════════════════════════════ -->
+  <section class="bg-gradient-to-r from-red-dark via-red-accent to-red-dark py-16 md:py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold uppercase tracking-wider text-white mb-4">
+        Want to Be in Our Gallery?
+      </h2>
+      <p class="text-lg md:text-xl text-white/90 font-body mb-10">
+        Join the team and become part of the Midguard story.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white hover:bg-gray-100 text-charcoal-950 font-heading text-lg uppercase tracking-wider font-bold px-12 py-4 rounded transition-colors duration-300 shadow-lg hover:shadow-xl"
+      >
+        Start Training Today
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .gallery-grid > div,
+  .gallery-grid > :global(astro-island) {
+    overflow: hidden;
+  }
+
+  .gallery-grid img {
+    transition: transform 0.5s ease;
+  }
+
+  .gallery-grid > div:hover img {
+    transform: scale(1.03);
+  }
+</style>

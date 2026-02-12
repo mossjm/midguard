@@ -1,0 +1,107 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/images/logos/logo-dark-bg.png';
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/programs', label: 'Programs' },
+  { href: '/schedule', label: 'Schedule' },
+  { href: '/instructors', label: 'Instructors' },
+  { href: '/about', label: 'About' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-charcoal-950/95 backdrop-blur-sm border-b border-white/10" id="main-nav">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="/" class="flex-shrink-0">
+        <Image src={logo} alt="Midguard Academy" class="h-14 w-auto" width={200} height={56} />
+      </a>
+
+      <div class="hidden lg:flex items-center gap-1">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class:list={[
+              'px-3 py-2 text-sm font-medium tracking-wider uppercase transition-colors duration-200',
+              currentPath === link.href
+                ? 'text-red-accent'
+                : 'text-gray-300 hover:text-white'
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="ml-4 px-6 py-2.5 bg-red-accent hover:bg-red-hover text-white text-sm font-bold uppercase tracking-wider rounded transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-red-accent/25"
+        >
+          Free Trial
+        </a>
+      </div>
+
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 text-gray-300 hover:text-white"
+        aria-label="Toggle menu"
+      >
+        <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-charcoal-950/98 backdrop-blur-md">
+    <div class="px-4 py-4 space-y-1">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'block px-4 py-3 text-base font-medium uppercase tracking-wider transition-colors',
+            currentPath === link.href
+              ? 'text-red-accent bg-white/5'
+              : 'text-gray-300 hover:text-white hover:bg-white/5'
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="/contact"
+        class="block mt-4 px-4 py-3 bg-red-accent hover:bg-red-hover text-white text-center font-bold uppercase tracking-wider rounded transition-colors"
+      >
+        Start Your Free Trial
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    });
+  });
+</script>

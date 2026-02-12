@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import joshPhoto from '../../assets/images/original/josh-pinney.jpg';
+import robertPhoto from '../../assets/images/original/robert-tahtinen.jpg';
+---
+
+<BaseLayout title="Instructors">
+
+  <!-- PAGE HERO -->
+  <section class="bg-charcoal-900 py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-gold-accent uppercase tracking-widest text-sm font-heading font-semibold mb-4">
+        Learn from the Best
+      </span>
+      <h1 class="text-4xl md:text-6xl font-heading uppercase tracking-wider text-white mb-6">
+        Our Instructors
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+        World-class instruction from proven fighters and dedicated coaches.
+      </p>
+    </div>
+  </section>
+
+  <!-- INSTRUCTOR PROFILES -->
+  <section class="bg-charcoal-950 py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- JOSH PINNEY -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-28 lg:mb-36">
+        <!-- Image -->
+        <div class="relative">
+          <div class="absolute -inset-3 bg-gradient-to-br from-red-accent/20 to-transparent rounded-2xl blur-xl"></div>
+          <Image
+            src={joshPhoto}
+            alt="Josh Pinney — Head Kickboxing Instructor at Midguard Academy"
+            width={600}
+            height={750}
+            class="relative rounded-xl object-cover w-full aspect-[3/4] shadow-2xl shadow-red-accent/10"
+          />
+        </div>
+
+        <!-- Bio -->
+        <div class="flex flex-col justify-center">
+          <h2 class="text-3xl md:text-4xl font-heading uppercase tracking-wider text-white mb-4">
+            Josh Pinney
+          </h2>
+          <span class="inline-block bg-red-accent/20 text-red-accent px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wide mb-6 self-start">
+            Head Kickboxing Instructor
+          </span>
+          <p class="text-gray-300 leading-relaxed mb-4 text-base md:text-lg">
+            Josh has been training in martial arts since 2002 under James Parson at the American Kenpo Kickboxing Academy. He earned his Black Belt from the I.K.C.A. in 2007 and holds a Brazilian Jiu-Jitsu Blue Belt under Chris Atkins of Gracie Barra Santa Barbara, as well as a Purple Belt in No-Gi under Robert Tahtinen.
+          </p>
+          <p class="text-gray-300 leading-relaxed mb-8 text-base md:text-lg">
+            A proud US Army veteran, Josh trained alongside elite fighters including Dan Henderson, Gray Maynard, and Mark Munoz. He has coached multiple state and national champions. After relocating to Wisconsin, Josh founded Midguard Academy to share his passion for martial arts and build a community of warriors.
+          </p>
+
+          <!-- Credentials -->
+          <div class="bg-charcoal-900/60 rounded-xl p-6 border border-charcoal-700/40">
+            <h3 class="text-sm font-heading uppercase tracking-widest text-gold-accent mb-4">
+              Credentials
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">Black Belt — I.K.C.A. (2007)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">BJJ Blue Belt — Gracie Barra Santa Barbara</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">Purple Belt No-Gi — Under Robert Tahtinen</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">US Army Veteran</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">Coached Multiple State & National Champions</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">Training Since 2002</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="flex items-center gap-4 mb-28 lg:mb-36">
+        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-charcoal-700 to-transparent"></div>
+        <div class="h-2 w-2 rotate-45 bg-red-accent"></div>
+        <div class="flex-1 h-px bg-gradient-to-r from-transparent via-charcoal-700 to-transparent"></div>
+      </div>
+
+      <!-- ROBERT TAHTINEN -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <!-- Bio (first on mobile, second on desktop via order) -->
+        <div class="flex flex-col justify-center order-2 lg:order-1">
+          <h2 class="text-3xl md:text-4xl font-heading uppercase tracking-wider text-white mb-4">
+            Robert Tahtinen
+          </h2>
+          <span class="inline-block bg-red-accent/20 text-red-accent px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wide mb-6 self-start">
+            Head Jiu-Jitsu Instructor &bull; Nibiru BJJ
+          </span>
+          <p class="text-gray-300 leading-relaxed mb-4 text-base md:text-lg">
+            Robert has been training Brazilian Jiu-Jitsu since 2011 under Cleber Luciano, building on a foundation of 15 years of wrestling experience. A retired MMA fighter, Robert earned four title belts and a King of the Cage victory during his competitive career.
+          </p>
+          <p class="text-gray-300 leading-relaxed mb-8 text-base md:text-lg">
+            He received his Black Belt from the TAC team in November 2021 and has won the IBJJF Open and Arizona State No-Gi tournament. As head instructor at Nibiru BJJ and promotion certifier for Midguard Academy, Robert still competes regularly, bringing current, battle-tested techniques to every class.
+          </p>
+
+          <!-- Credentials -->
+          <div class="bg-charcoal-900/60 rounded-xl p-6 border border-charcoal-700/40">
+            <h3 class="text-sm font-heading uppercase tracking-widest text-gold-accent mb-4">
+              Credentials
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">Black Belt — TAC Team (2021)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">Retired MMA Fighter — 4 Title Belts</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">King of the Cage Victor</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">IBJJF Open Champion</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">Arizona State No-Gi Champion</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-red-accent flex-shrink-0"></span>
+                <span class="text-gray-200">15 Years Wrestling Experience</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="relative order-1 lg:order-2">
+          <div class="absolute -inset-3 bg-gradient-to-bl from-red-accent/20 to-transparent rounded-2xl blur-xl"></div>
+          <Image
+            src={robertPhoto}
+            alt="Robert Tahtinen — Head Jiu-Jitsu Instructor at Midguard Academy (Nibiru BJJ)"
+            width={600}
+            height={750}
+            class="relative rounded-xl object-cover w-full aspect-[3/4] shadow-2xl shadow-red-accent/10"
+          />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="bg-gradient-to-r from-red-dark via-red-accent to-red-dark py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-5xl font-heading uppercase tracking-wider text-white mb-6">
+        Train with the Best
+      </h2>
+      <p class="text-lg md:text-xl text-white/90 mb-8 max-w-xl mx-auto">
+        Learn from proven champions and dedicated coaches. Your first class is on us.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-red-accent font-heading uppercase tracking-wider text-lg px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300 shadow-lg shadow-black/20"
+      >
+        Start Your Free Trial
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

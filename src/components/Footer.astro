@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/images/logos/logo-dark-bg.png';
+---
+
+<footer class="bg-charcoal-950 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="lg:col-span-1">
+        <Image src={logo} alt="Midguard Academy" class="h-16 w-auto mb-4" width={200} height={64} />
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Forging warriors in the martial arts. Kickboxing, Brazilian Jiu-Jitsu, and kids programs.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white text-sm font-bold tracking-wider mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="/programs" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Programs</a></li>
+          <li><a href="/schedule" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Schedule</a></li>
+          <li><a href="/instructors" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Instructors</a></li>
+          <li><a href="/about" class="text-gray-400 hover:text-red-accent text-sm transition-colors">About</a></li>
+          <li><a href="/contact" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white text-sm font-bold tracking-wider mb-4">Programs</h4>
+        <ul class="space-y-2">
+          <li><a href="/programs" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Kickboxing</a></li>
+          <li><a href="/programs" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Brazilian Jiu-Jitsu</a></li>
+          <li><a href="/programs" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Kids Jiu-Jitsu</a></li>
+          <li><a href="/programs" class="text-gray-400 hover:text-red-accent text-sm transition-colors">Ninja Kids</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white text-sm font-bold tracking-wider mb-4">Hours</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li class="flex justify-between"><span>Mon – Fri</span><span class="text-white">5:00 – 7:30 PM</span></li>
+          <li class="flex justify-between"><span>Saturday</span><span class="text-white">9:00 – 11:00 AM</span></li>
+          <li class="flex justify-between"><span>Sunday</span><span class="text-red-accent">Closed</span></li>
+        </ul>
+        <a
+          href="/contact"
+          class="inline-block mt-6 px-5 py-2.5 bg-red-accent hover:bg-red-hover text-white text-sm font-bold uppercase tracking-wider rounded transition-all duration-200"
+        >
+          Free Trial
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-white/10 text-center">
+      <p class="text-gray-500 text-sm">
+        &copy; {new Date().getFullYear()} Midguard Academy. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
